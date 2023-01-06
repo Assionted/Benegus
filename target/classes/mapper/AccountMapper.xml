@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="im.design.mapper.AccountMapper">
+  <insert id="save">
+    INSERT INTO
+      account (name, money)
+    VALUES
+      (#{name}, #{money})
+  </insert>
+  
+  <select id="fetchList" resultType="Account">
+    SELECT id, name, money FROM account
+  </select>
+</mapper>
