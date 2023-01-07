@@ -7,6 +7,6 @@
   </head>
   <body>
     <h3>查询了所有的账户信息</h3>
-    ${list.get(0)} ${list.get(0)}
+    ${list}
   </body>
 </html>
