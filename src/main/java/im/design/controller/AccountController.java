@@ -33,7 +33,6 @@ public class AccountController {
 	// 查询账户列表
 	@RequestMapping("/findAll")
 	public String findAll(Model model) {
-		System.out.println("表现层，查询所有账户...");
 		// 调用 service 方法
 		List<Account> list = accountService.findAllAccount();
 		model.addAttribute("list",list);
@@ -43,7 +42,6 @@ public class AccountController {
 	// 保存账户数据
 	@RequestMapping("/save")
 	public void save(Account account, HttpServletRequest request, HttpServletResponse response) throws IOException {
-		System.out.println("表现层，保存账户...");
 		// 调用 service 方法
 		accountService.saveAccount(account);
 		response.sendRedirect(request.getContextPath()+"/account/findAll");

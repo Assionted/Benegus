@@ -16,12 +16,10 @@ public class AccountServiceImpl implements AccountService {
 	private AccountMapper accountMapper;
 
 	public List<Account> findAllAccount() {
-		System.out.println("业务层，查询所有账户...");
 		return accountMapper.fetchList();
 	}
 
 	public void saveAccount(Account account) {
-		System.out.println("业务层，存账户...");
 		accountMapper.save(account);
 	}
 
